@@ -1,0 +1,16 @@
+module nBitsCounter #(parameter n_bits=4)
+							(input  logic clk,input  logic rst,output logic [n_bits-1:0] outs=0);
+	
+//	assign outs[3:0] = 0;
+	always@(posedge clk)
+	begin
+		outs <= outs + 1;
+	end
+
+
+endmodule
+
+
+
+
+

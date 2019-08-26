@@ -1,0 +1,791 @@
+# do Laboratorio2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /opt/altera/18.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/Tareas/Laboratorio2 {/home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:07 on Aug 26,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/Tareas/Laboratorio2" /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter.sv 
+# -- Compiling module nBitsCounter
+# 
+# Top level modules:
+# 	nBitsCounter
+# End time: 12:37:07 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:22 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv 
+# -- Compiling module nBitsCounter_testbech
+# 
+# Top level modules:
+# 	nBitsCounter_testbech
+# End time: 12:37:22 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:22 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter.sv 
+# -- Compiling module nBitsCounter
+# 
+# Top level modules:
+# 	nBitsCounter
+# End time: 12:37:22 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.nBitsCounter_testbech
+# vsim work.nBitsCounter_testbech 
+# Start time: 12:37:25 on Aug 26,2019
+# Loading sv_std.std
+# Loading work.nBitsCounter_testbech
+# Loading work.nBitsCounter
+add wave -position insertpoint sim:/nBitsCounter_testbech/*
+run
+# Inicio de la simulacion
+# --->ERROR! El contador no funciona correctamente
+# counter out:  1, counter_check:  0
+# ** Note: $finish    : /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv(25)
+#    Time: 3 ps  Iteration: 1  Instance: /nBitsCounter_testbech
+# 1
+# Break in Module nBitsCounter_testbech at /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv line 25
+# Can't move the Now cursor.
+vlog -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:38 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv 
+# -- Compiling module nBitsCounter_testbech
+# 
+# Top level modules:
+# 	nBitsCounter_testbech
+# End time: 12:38:38 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+# --->ERROR! El contador no funciona correctamente
+# counter out:  2, counter_check:  0
+# ** Note: $finish    : /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv(25)
+#    Time: 5 ps  Iteration: 1  Instance: /nBitsCounter_testbech
+# 1
+# Break in Module nBitsCounter_testbech at /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv line 25
+restart
+# Loading work.nBitsCounter_testbech
+run
+# Inicio de la simulacion
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# ** Note: $finish    : /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv(26)
+#    Time: 1 ps  Iteration: 1  Instance: /nBitsCounter_testbech
+# 1
+# Break in Module nBitsCounter_testbech at /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv line 26
+vlog -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:44:22 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv 
+# -- Compiling module nBitsCounter_testbech
+# 
+# Top level modules:
+# 	nBitsCounter_testbech
+# End time: 12:44:22 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.nBitsCounter_testbech
+run
+# Inicio de la simulacion
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# --->ERROR! El contador no funciona correctamente
+# counter out:  1, counter_check:  2
+# --->ERROR! El contador no funciona correctamente
+# counter out:  2, counter_check:  3
+# --->ERROR! El contador no funciona correctamente
+# counter out:  3, counter_check:  4
+# --->ERROR! El contador no funciona correctamente
+# counter out:  4, counter_check:  5
+# --->ERROR! El contador no funciona correctamente
+# counter out:  5, counter_check:  6
+# --->ERROR! El contador no funciona correctamente
+# counter out:  6, counter_check:  7
+# --->ERROR! El contador no funciona correctamente
+# counter out:  7, counter_check:  8
+# --->ERROR! El contador no funciona correctamente
+# counter out:  8, counter_check:  9
+# --->ERROR! El contador no funciona correctamente
+# counter out:  9, counter_check: 10
+# --->ERROR! El contador no funciona correctamente
+# counter out: 10, counter_check: 11
+# --->ERROR! El contador no funciona correctamente
+# counter out: 11, counter_check: 12
+# --->ERROR! El contador no funciona correctamente
+# counter out: 12, counter_check: 13
+# --->ERROR! El contador no funciona correctamente
+# counter out: 13, counter_check: 14
+# --->ERROR! El contador no funciona correctamente
+# counter out: 14, counter_check: 15
+# --->ERROR! El contador no funciona correctamente
+# counter out: 15, counter_check: 16
+# --->ERROR! El contador no funciona correctamente
+# counter out: 16, counter_check: 17
+# --->ERROR! El contador no funciona correctamente
+# counter out: 17, counter_check: 18
+# --->ERROR! El contador no funciona correctamente
+# counter out: 18, counter_check: 19
+# --->ERROR! El contador no funciona correctamente
+# counter out: 19, counter_check: 20
+# --->ERROR! El contador no funciona correctamente
+# counter out: 20, counter_check: 21
+# --->ERROR! El contador no funciona correctamente
+# counter out: 21, counter_check: 22
+# --->ERROR! El contador no funciona correctamente
+# counter out: 22, counter_check: 23
+# --->ERROR! El contador no funciona correctamente
+# counter out: 23, counter_check: 24
+# --->ERROR! El contador no funciona correctamente
+# counter out: 24, counter_check: 25
+# --->ERROR! El contador no funciona correctamente
+# counter out: 25, counter_check: 26
+# --->ERROR! El contador no funciona correctamente
+# counter out: 26, counter_check: 27
+# --->ERROR! El contador no funciona correctamente
+# counter out: 27, counter_check: 28
+# --->ERROR! El contador no funciona correctamente
+# counter out: 28, counter_check: 29
+# --->ERROR! El contador no funciona correctamente
+# counter out: 29, counter_check: 30
+# --->ERROR! El contador no funciona correctamente
+# counter out: 30, counter_check: 31
+# --->ERROR! El contador no funciona correctamente
+# counter out: 31, counter_check: 32
+# --->ERROR! El contador no funciona correctamente
+# counter out: 32, counter_check: 33
+# --->ERROR! El contador no funciona correctamente
+# counter out: 33, counter_check: 34
+# --->ERROR! El contador no funciona correctamente
+# counter out: 34, counter_check: 35
+# --->ERROR! El contador no funciona correctamente
+# counter out: 35, counter_check: 36
+# --->ERROR! El contador no funciona correctamente
+# counter out: 36, counter_check: 37
+# --->ERROR! El contador no funciona correctamente
+# counter out: 37, counter_check: 38
+# --->ERROR! El contador no funciona correctamente
+# counter out: 38, counter_check: 39
+# --->ERROR! El contador no funciona correctamente
+# counter out: 39, counter_check: 40
+# --->ERROR! El contador no funciona correctamente
+# counter out: 40, counter_check: 41
+# --->ERROR! El contador no funciona correctamente
+# counter out: 41, counter_check: 42
+# --->ERROR! El contador no funciona correctamente
+# counter out: 42, counter_check: 43
+# --->ERROR! El contador no funciona correctamente
+# counter out: 43, counter_check: 44
+# --->ERROR! El contador no funciona correctamente
+# counter out: 44, counter_check: 45
+# --->ERROR! El contador no funciona correctamente
+# counter out: 45, counter_check: 46
+# --->ERROR! El contador no funciona correctamente
+# counter out: 46, counter_check: 47
+# --->ERROR! El contador no funciona correctamente
+# counter out: 47, counter_check: 48
+# --->ERROR! El contador no funciona correctamente
+# counter out: 48, counter_check: 49
+# --->ERROR! El contador no funciona correctamente
+# counter out: 49, counter_check: 50
+run
+# --->ERROR! El contador no funciona correctamente
+# counter out: 50, counter_check: 51
+# --->ERROR! El contador no funciona correctamente
+# counter out: 51, counter_check: 52
+# --->ERROR! El contador no funciona correctamente
+# counter out: 52, counter_check: 53
+# --->ERROR! El contador no funciona correctamente
+# counter out: 53, counter_check: 54
+# --->ERROR! El contador no funciona correctamente
+# counter out: 54, counter_check: 55
+# --->ERROR! El contador no funciona correctamente
+# counter out: 55, counter_check: 56
+# --->ERROR! El contador no funciona correctamente
+# counter out: 56, counter_check: 57
+# --->ERROR! El contador no funciona correctamente
+# counter out: 57, counter_check: 58
+# --->ERROR! El contador no funciona correctamente
+# counter out: 58, counter_check: 59
+# --->ERROR! El contador no funciona correctamente
+# counter out: 59, counter_check: 60
+# --->ERROR! El contador no funciona correctamente
+# counter out: 60, counter_check: 61
+# --->ERROR! El contador no funciona correctamente
+# counter out: 61, counter_check: 62
+# --->ERROR! El contador no funciona correctamente
+# counter out: 62, counter_check: 63
+# --->ERROR! El contador no funciona correctamente
+# counter out: 63, counter_check:  0
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# --->ERROR! El contador no funciona correctamente
+# counter out:  1, counter_check:  2
+# --->ERROR! El contador no funciona correctamente
+# counter out:  2, counter_check:  3
+# --->ERROR! El contador no funciona correctamente
+# counter out:  3, counter_check:  4
+# --->ERROR! El contador no funciona correctamente
+# counter out:  4, counter_check:  5
+# --->ERROR! El contador no funciona correctamente
+# counter out:  5, counter_check:  6
+# --->ERROR! El contador no funciona correctamente
+# counter out:  6, counter_check:  7
+# --->ERROR! El contador no funciona correctamente
+# counter out:  7, counter_check:  8
+# --->ERROR! El contador no funciona correctamente
+# counter out:  8, counter_check:  9
+# --->ERROR! El contador no funciona correctamente
+# counter out:  9, counter_check: 10
+# --->ERROR! El contador no funciona correctamente
+# counter out: 10, counter_check: 11
+# --->ERROR! El contador no funciona correctamente
+# counter out: 11, counter_check: 12
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  2
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  3
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  4
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  5
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  6
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  7
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  8
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  9
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 10
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 11
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 12
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 13
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 14
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 15
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 16
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 17
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 18
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 19
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 20
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 21
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 22
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 23
+# La simulacion termino sin problemas
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 24
+run
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 25
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 26
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 27
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 28
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 29
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 30
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 31
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 32
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 33
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 34
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 35
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 36
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 37
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 38
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 39
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 40
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 41
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 42
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 43
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 44
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 45
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 46
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 47
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 48
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 49
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 50
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 51
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 52
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 53
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 54
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 55
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 56
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 57
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 58
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 59
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 60
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 61
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 62
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 63
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  2
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  3
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  4
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  5
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  6
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  7
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  8
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  9
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 10
+run
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 11
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 12
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  2
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  3
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  4
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  5
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  6
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  7
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  8
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  9
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 10
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 11
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 12
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 13
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 14
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 15
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 16
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 17
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 18
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 19
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 20
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 21
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 22
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 23
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 24
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 25
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 26
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 27
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 28
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 29
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 30
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 31
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 32
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 33
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 34
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 35
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 36
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 37
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 38
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 39
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 40
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 41
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 42
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 43
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 44
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 45
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 46
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 47
+# ** Note: $finish    : /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv(32)
+#    Time: 399 ps  Iteration: 0  Instance: /nBitsCounter_testbech
+# 1
+# Break in Module nBitsCounter_testbech at /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv line 32
+vlog -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:46:29 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv 
+# -- Compiling module nBitsCounter_testbech
+# ** Error: (vlog-13069) /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv(22): near ":": syntax error, unexpected ':'.
+# End time: 12:46:29 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /opt/altera/18.1/modelsim_ase/linuxaloem/vlog failed.
+vlog -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:47:17 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv 
+# -- Compiling module nBitsCounter_testbech
+# 
+# Top level modules:
+# 	nBitsCounter_testbech
+# End time: 12:47:17 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 48
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 49
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 50
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 51
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 52
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 53
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 54
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 55
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 56
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 57
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 58
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 59
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 60
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 61
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 62
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 63
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  2
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  3
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  4
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  5
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  6
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  7
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  8
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  9
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 10
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 11
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 12
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  2
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  3
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  4
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  5
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  6
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  7
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  8
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  9
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 10
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 11
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 12
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 13
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 14
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 15
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 16
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 17
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 18
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 19
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 20
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 21
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check: 22
+restart
+# Loading work.nBitsCounter_testbech
+run
+# Inicio de la simulacion
+# --->ERROR! El contador no funciona correctamente
+# counter out:  0, counter_check:  1
+# --->ERROR! El contador no funciona correctamente
+# counter out:  1, counter_check:  2
+# --->ERROR! El contador no funciona correctamente
+# counter out:  2, counter_check:  3
+# --->ERROR! El contador no funciona correctamente
+# counter out:  3, counter_check:  4
+# --->ERROR! El contador no funciona correctamente
+# counter out:  4, counter_check:  5
+# --->ERROR! El contador no funciona correctamente
+# counter out:  5, counter_check:  6
+# --->ERROR! El contador no funciona correctamente
+# counter out:  6, counter_check:  7
+# --->ERROR! El contador no funciona correctamente
+# counter out:  7, counter_check:  8
+# --->ERROR! El contador no funciona correctamente
+# counter out:  8, counter_check:  9
+# --->ERROR! El contador no funciona correctamente
+# counter out:  9, counter_check: 10
+# --->ERROR! El contador no funciona correctamente
+# counter out: 10, counter_check: 11
+# --->ERROR! El contador no funciona correctamente
+# counter out: 11, counter_check: 12
+# --->ERROR! El contador no funciona correctamente
+# counter out: 12, counter_check: 13
+# --->ERROR! El contador no funciona correctamente
+# counter out: 13, counter_check: 14
+# --->ERROR! El contador no funciona correctamente
+# counter out: 14, counter_check: 15
+# --->ERROR! El contador no funciona correctamente
+# counter out: 15, counter_check: 16
+# --->ERROR! El contador no funciona correctamente
+# counter out: 16, counter_check: 17
+# --->ERROR! El contador no funciona correctamente
+# counter out: 17, counter_check: 18
+# --->ERROR! El contador no funciona correctamente
+# counter out: 18, counter_check: 19
+# --->ERROR! El contador no funciona correctamente
+# counter out: 19, counter_check: 20
+# --->ERROR! El contador no funciona correctamente
+# counter out: 20, counter_check: 21
+# --->ERROR! El contador no funciona correctamente
+# counter out: 21, counter_check: 22
+# --->ERROR! El contador no funciona correctamente
+# counter out: 22, counter_check: 23
+# --->ERROR! El contador no funciona correctamente
+# counter out: 23, counter_check: 24
+# --->ERROR! El contador no funciona correctamente
+# counter out: 24, counter_check: 25
+# --->ERROR! El contador no funciona correctamente
+# counter out: 25, counter_check: 26
+# --->ERROR! El contador no funciona correctamente
+# counter out: 26, counter_check: 27
+# --->ERROR! El contador no funciona correctamente
+# counter out: 27, counter_check: 28
+# --->ERROR! El contador no funciona correctamente
+# counter out: 28, counter_check: 29
+# --->ERROR! El contador no funciona correctamente
+# counter out: 29, counter_check: 30
+# --->ERROR! El contador no funciona correctamente
+# counter out: 30, counter_check: 31
+# --->ERROR! El contador no funciona correctamente
+# counter out: 31, counter_check: 32
+# --->ERROR! El contador no funciona correctamente
+# counter out: 32, counter_check: 33
+# --->ERROR! El contador no funciona correctamente
+# counter out: 33, counter_check: 34
+# --->ERROR! El contador no funciona correctamente
+# counter out: 34, counter_check: 35
+# --->ERROR! El contador no funciona correctamente
+# counter out: 35, counter_check: 36
+# --->ERROR! El contador no funciona correctamente
+# counter out: 36, counter_check: 37
+# --->ERROR! El contador no funciona correctamente
+# counter out: 37, counter_check: 38
+# --->ERROR! El contador no funciona correctamente
+# counter out: 38, counter_check: 39
+# --->ERROR! El contador no funciona correctamente
+# counter out: 39, counter_check: 40
+# --->ERROR! El contador no funciona correctamente
+# counter out: 40, counter_check: 41
+# --->ERROR! El contador no funciona correctamente
+# counter out: 41, counter_check: 42
+# --->ERROR! El contador no funciona correctamente
+# counter out: 42, counter_check: 43
+# --->ERROR! El contador no funciona correctamente
+# counter out: 43, counter_check: 44
+# --->ERROR! El contador no funciona correctamente
+# counter out: 44, counter_check: 45
+# --->ERROR! El contador no funciona correctamente
+# counter out: 45, counter_check: 46
+# --->ERROR! El contador no funciona correctamente
+# counter out: 46, counter_check: 47
+# --->ERROR! El contador no funciona correctamente
+# counter out: 47, counter_check: 48
+# --->ERROR! El contador no funciona correctamente
+# counter out: 48, counter_check: 49
+# --->ERROR! El contador no funciona correctamente
+# counter out: 49, counter_check: 50
+vlog -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:51:31 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv 
+# -- Compiling module nBitsCounter_testbech
+# ** Error: (vlog-13069) /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv(30): near "end": syntax error, unexpected end.
+# End time: 12:51:31 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /opt/altera/18.1/modelsim_ase/linuxaloem/vlog failed.
+vlog -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:51:53 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv 
+# -- Compiling module nBitsCounter_testbech
+# 
+# Top level modules:
+# 	nBitsCounter_testbech
+# End time: 12:51:53 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.nBitsCounter_testbech
+# End time: 12:51:59 on Aug 26,2019, Elapsed time: 0:14:34
+# Errors: 5, Warnings: 0, Suppressed Warnings: 40
+# vsim work.nBitsCounter_testbech 
+# Start time: 12:51:59 on Aug 26,2019
+# Loading sv_std.std
+# Loading work.nBitsCounter_testbech
+# Loading work.nBitsCounter
+add wave -position insertpoint sim:/nBitsCounter_testbech/*
+run
+# Inicio de la simulacion
+run
+# La simulacion termino sin problemas
+run
+run
+# ** Note: $finish    : /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv(34)
+#    Time: 399 ps  Iteration: 0  Instance: /nBitsCounter_testbech
+# 1
+# Break in Module nBitsCounter_testbech at /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv line 34
+vlog -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:53:37 on Aug 26,2019
+# vlog -reportprogress 300 -work work /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv 
+# -- Compiling module nBitsCounter_testbech
+# 
+# Top level modules:
+# 	nBitsCounter_testbech
+# End time: 12:53:37 on Aug 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.nBitsCounter_testbech
+# End time: 12:53:42 on Aug 26,2019, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 0, Suppressed Warnings: 10
+# vsim work.nBitsCounter_testbech 
+# Start time: 12:53:42 on Aug 26,2019
+# Loading sv_std.std
+# Loading work.nBitsCounter_testbech
+# Loading work.nBitsCounter
+add wave -position insertpoint sim:/nBitsCounter_testbech/*
+run -all
+# Inicio de la simulacion para contador de           6 bits
+# La simulacion termino sin problemas
+# ** Note: $finish    : /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv(34)
+#    Time: 399 ps  Iteration: 0  Instance: /nBitsCounter_testbech
+# 1
+# Break in Module nBitsCounter_testbech at /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv line 34

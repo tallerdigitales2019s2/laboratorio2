@@ -1,0 +1,15 @@
+|nBitsCounter
+clk => outs[0]~reg0.CLK
+clk => outs[1]~reg0.CLK
+clk => outs[2]~reg0.CLK
+clk => outs[3]~reg0.CLK
+rst => outs[0]~reg0.ACLR
+rst => outs[1]~reg0.ACLR
+rst => outs[2]~reg0.ACLR
+rst => outs[3]~reg0.ACLR
+outs[0] << outs[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outs[1] << outs[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outs[2] << outs[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+outs[3] << outs[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

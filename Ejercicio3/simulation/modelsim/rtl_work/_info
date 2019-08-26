@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/gsegura/Documents/taller/Tareas/Laboratorio2/simulation/modelsim
+vnBitsCounter
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1566844642
+!i10b 1
+!s100 O[GjG[DG65KdELDmQ?>LW0
+I2Yf9=LzRF<k@5C3DU]AkU3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 nBitsCounter_sv_unit
+S1
+R0
+w1566840578
+8/home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter.sv
+F/home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter.sv
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1566844642.000000
+!s107 /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter.sv|
+!s90 -reportprogress|300|-work|work|/home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter.sv|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+nn@bits@counter
+vnBitsCounter_testbech
+R1
+!s110 1566845617
+!i10b 1
+!s100 nT0BF6TOl^P^g:2IPYi?[3
+I<d?>BgC?>HHA0X_0iH[6I3
+R2
+!s105 nBitsCounter_testbech_sv_unit
+S1
+R0
+w1566845607
+8/home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+F/home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1566845617.000000
+!s107 /home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv|
+!s90 -reportprogress|300|-work|work|/home/gsegura/Documents/taller/Tareas/Laboratorio2/nBitsCounter_testbech.sv|
+!i113 1
+R4
+R5
+nn@bits@counter_testbech
